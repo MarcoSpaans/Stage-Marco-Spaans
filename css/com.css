@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    /*color background*/
+    --background-gradient-clr-1: rgb(175, 184, 233);
+    --background-gradient-clr-2: rgb(231, 198, 231);
+
+    /*color header*/
+    --header-clr: rgb(166, 166, 166);
+    --header-hover-clr: rgb(115, 115, 115);
+    --header-text-clr: rgb(255, 255, 255);
+
+    /*color table*/
+    --table-head-clr: rgb(185, 185, 213);
+    --table-body-odd-clr: rgb(195, 195, 223);
+    --table-body-even-crl: rgb(225, 225, 253);
+    --border-table-clr: rgb(165, 165, 193);
+
+    /*color footer & items*/
+    --footer-clr: rgb(143, 143, 188);
+    --delete-clr: rgb(255, 50, 50);
+    --change-clr: rgb(249, 214, 63);
+
+    /*color pagination*/
+    --pagination-background-clr: rgb(163, 163, 194);
+    --pagination-active-clr: rgb(117, 117, 163);
+    --pagination-border-clr: rgb(71, 71, 107);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+     background-color: var(--background-clr);
+     font-family: 'Open Sans', sans-serif;
+     height: 100%;
+}
+
+header {
+    background-color: var(--header-clr);
+}
+
+li.add {
+    float: right;
+}
+
+header ul li a {
+    color: var(--header-text-clr);
+}
+
+.active_menu {
+    background-color: var(--header-hover-clr);
+}
+
+header ul li a:hover:not(.active_menu) {
+    background-color: var(--header-hover-clr);
+}
+
+.gradient {
+    height: 110vh;
+    background: linear-gradient(to top right, var(--background-gradient-clr-1) 0%, var(--background-gradient-clr-2) 100%);
+}
+
+main table {
+    border: solid 3px var(--border-table-clr);
+}
+
+main table thead {
+    background-color: var(--table-head-clr);
+}
+
+main table tbody tr {
+    background-color: var(--table-body-odd-clr);
+}
+
+main table tbody tr:nth-child(even) {
+    background-color: var(--table-body-even-crl);
+}
+
+a.change {
+    color: var(--change-clr);  
+}
+
+a.delete {
+    color: var(--delete-clr);
+}
+.pagination a {
+    background-color: var(--pagination-background-clr);
+    border: solid 1.5px var(--pagination-border-clr);
+}
+
+.pagination a.active {
+    background-color: var(--pagination-active-clr);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: var(--pagination-active-clr);
+}
+
+footer {
+    background-color: var(--footer-clr);
+}
+
+@media (min-width: 374px) {
+
+    header {
+        width: 100%;
+    }
+    
+    header h1 {
+        margin: 0 2%;
+        float: left;
+    }
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    header ul li {
+        float: left;
+    }
+    
+    header ul li a {
+        display: block;
+        text-align: center;
+        padding: 14px 12px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    main {
+        width: 90%;
+        padding: 0.5%;
+        margin: 0 auto;
+    }
+    
+    main h1 {
+        padding: 5% 0;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    main table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1% 0;
+    }
+    
+    main table thead tr th{
+        padding: 1% 0;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    main table tbody {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    
+    main table tbody tr td {
+        padding: 2% 3%;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .pagination {
+        display: inline-block;
+        padding-top: 3%;
+        position: relative;
+        margin-bottom: 7%;
+      }
+    
+    .pagination a {
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: 0.1s;
+    }
+    
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+      .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 2% 0;
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width: 424px) {
+
+    header {
+        width: 100%;
+    }
+    
+    header h1 {
+        margin: 0 1%;
+        float: left;
+    }
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    header ul li {
+        float: left;
+    }
+    
+    header ul li a {
+        display: block;
+        text-align: center;
+        padding: 16px 14px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    main {
+        width: 90%;
+        padding: 0.5%;
+        margin: 0 auto;
+    }
+    
+    main h1 {
+        padding: 1% 0;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    main table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1% 0;
+    }
+    
+    main table thead tr th{
+        padding: 1% 0;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    main table tbody {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    
+    main table tbody tr td {
+        padding: 2% 3%;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .pagination {
+        display: inline-block;
+        padding-top: 3%;
+        position: relative;
+        margin-bottom: 7%;
+      }
+    
+    .pagination a {
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+      .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 2% 0;
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width: 767px) {
+
+    header {
+        width: 100%;
+    }
+    
+    header h1 {
+        margin: 0 1%;        
+        float: left;
+    }
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    header ul li {
+        float: left;
+    }
+    
+    header ul li a {
+        display: block;
+        text-align: center;
+        padding: 16px 14px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    main {
+        width: 90%;
+        padding: 0.5%;
+        margin: 0 auto;
+    }
+    
+    main h1 {
+        padding: 1% 0;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    
+    main table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1% 0;
+    }
+    
+    main table thead tr th{
+        padding: 1% 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    main table tbody {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    
+    main table tbody tr td {
+        padding: 2% 3%;
+        text-align: center;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .pagination {
+        display: inline-block;
+        padding-top: 3%;
+        position: relative;
+        margin-bottom: 7%;
+      }
+    
+    .pagination a {
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+      .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 2% 0;
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width: 1023px) {
+
+    header {
+        width: 100%;
+    }
+    
+    header h1 {
+        margin: 0 1%;        
+        float: left;
+    }
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    header ul li {
+        float: left;
+    }
+    
+    header ul li a {
+        display: block;
+        text-align: center;
+        padding: 16px 14px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    main {
+        width: 90%;
+        padding: 0.5%;
+        margin: 0 auto;
+    }
+    
+    main h1 {
+        padding: 1% 0;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    
+    main table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1% 0;
+    }
+    
+    main table thead tr th{
+        padding: 1% 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    main table tbody {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    
+    main table tbody tr td {
+        padding: 2% 3%;
+        text-align: center;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .pagination {
+        display: inline-block;
+        padding-top: 3%;
+        position: relative;
+        margin-bottom: 7%;
+      }
+    
+    .pagination a {
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+      .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 2% 0;
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width: 1439px) {
+    
+    header {
+        width: 100%;
+    }
+    
+    header h1 {
+        margin: 0 1%;
+        float: left;
+    }
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    header ul li {
+        float: left;
+    }
+    
+    header ul li a {
+        display: block;
+        text-align: center;
+        padding: 16px 14px;
+        text-decoration: none;
+        transition: 0.1s;
+    }
+    
+    main {
+        width: 90%;
+        padding: 0.5%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+    
+    main h1 {
+        padding: 1% 0;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    
+    main table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    main table thead tr th{
+        padding: 1% 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    main table tbody {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    
+    main table tbody tr td {
+        padding: 2% 3%;
+        text-align: center;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .pagination {
+        display: inline-block;
+        padding-top: 1%;
+        position: relative;
+      }
+    
+    .pagination a {
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: 0.1s;
+        font-size: 1rem;
+    }
+    
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+    .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 2% 0;
+        background-color: var(--footer-clr);
+        position: fixed;
+        bottom: 0;
+    }
+
+}
